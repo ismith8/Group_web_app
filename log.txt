@@ -1,0 +1,89 @@
+creating hardcoded member data
+Created new Member
+added new member to list
+Created new Member
+added new member to list
+Created new Member
+added new member to list
+Created new Member
+added new member to list
+added new member to list
+added new member to list
+added new member to list
+added new member to list
+now have data to view in the system
+Created a new restaurant
+Added Panera Bread to Restaurants
+Created a new restaurant
+Added Starbucks to Restaurants
+Created a new restaurant
+Added Chiplote to Restaurants
+Created a new restaurant
+Added Dunkin' Donuts to Restaurants
+Created a new restaurant
+Added Steak and Shake to Restaurants
+requested single member based on ID
+Found member from ID
+updated current user
+successfully added a member
+Navigated to create_review
+Created a new Review
+requested current member
+requested current member
+Returning 5 items
+Created a new Review
+Added a review for 1 written by 1Contains 1 reviews
+Created review: User: 1
+Name: Korra
+RestaurantID: 1
+Rating: 5
+
+I really like their bread
+Navigated to home
+Navigated to all-restaurants
+Created a RestaurantWrapper
+Requested all Restaurants
+Created a RestaurantWrapper
+Navigated to Panera Bread
+Navigated to home
+Navigated to all-restaurants
+Created a RestaurantWrapper
+Requested all Restaurants
+Created a RestaurantWrapper
+Navigated to Chiplote
+Navigated to home
+Navigated to create_review
+Created a new Review
+requested current member
+requested current member
+Returning 5 items
+Created a new Review
+Failed to add review, already exists
+Failed to add review
+An error occured :(
+Navigated to home
+updated current user
+user logged out
+requested single member based on ID
+Found member from ID
+updated current user
+successfully added a member
+Navigated to create_review
+Created a new Review
+requested current member
+requested current member
+Returning 5 items
+Created a new Review
+Added a review for 1 written by 3Contains 2 reviews
+Created review: User: 3
+Name: Pabu
+RestaurantID: 1
+Rating: 1
+
+I HATE their bread
+Navigated to home
+Navigated to all-restaurants
+Created a RestaurantWrapper
+Requested all Restaurants
+Created a RestaurantWrapper
+Navigated to Panera Bread
