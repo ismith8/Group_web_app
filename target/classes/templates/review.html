@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link type ="text/css" rel="stylesheet" href="css/styles.css">  
+	<link rel="stylesheet" th:href="@{/css/review_rest.css}"> 
+	<title th:text="${r.name}"></title>
+</head>
+
+
+<body>
+	<div class = "header">
+		<div class = "back">
+			<button class="back_btn" onclick="window.location='/'"></button>
+		</div>
+		<h1><span th:text="${r.name}"></span></h1>
+		<div class = "h_spacer"></div>
+	</div>
+
+	<div class = "reviews_body">
+
+		<div class = "logo-review">
+			<img th:src="${r.path}">
+		</div>
+		<div class = "review-info">
+			<h2>Overall review: <span th:text=" ${avgRating}"></span></h2>
+
+			<div class = "reviews-list">
+				<div th:each = "p : ${reviews}" class = "person-review-info">
+					<h4><span th:text="${p.name}"></span></h4>
+					<p><span th:text="${p.rating}"></span></p>
+					<p><span th:text="${p.comment}"></span></p>
+				</div>
+			</div>
+			<div class='review-count'>
+				<p><span th:text = "${r.name}"></span> has <span th:text = "${reviews.size}"></span> review(s)</p>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html> 

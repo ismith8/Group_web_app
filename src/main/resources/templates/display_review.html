@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="css/styles.css">  
+	<link rel="stylesheet" th:href="@{/css/review_rest.css}">  
+	<title>Georgie's Eat's</title>
+</head>
+
+<body>
+	<div class = "header">
+		<div class = "back">
+			<button class="back_btn" onclick="window.location='/'"></button>
+		</div>
+		<h1>Your review</h1>
+		<div class = "h_spacer"></div>
+	</div>
+
+	<div class = "main">
+		<span>User: </span><span th:text="${review.name}"></span><br/>
+		<span>Restaurant: </span><span th:text="${review.restaurantID}"></span><br/>
+		<span>Rating: </span><span th:text="${review.rating}"></span><br/>
+		<span>Comment: </span><span th:text="${review.comment}"></span><br/>
+	</div>
+
+</body>
+</html>

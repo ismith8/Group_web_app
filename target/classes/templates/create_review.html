@@ -1,0 +1,65 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="css/styles.css">  
+	<link rel="stylesheet" th:href="@{/css/review_rest.css}">  
+	<title>Georgie's Eat's</title>
+</head>
+
+
+<body>
+	<div class = "header">
+		<div class = "back">
+			<button class="back_btn" onclick="window.location='/'"></button>
+		</div>
+		<h1>Create a review</h1>
+		<div class = "h_spacer"></div>
+	</div>
+
+
+	<div class = "create_review_container">
+		<div class = "create_review_form">
+		
+
+
+			<form action="#" th:action="@{/create_review}" method="post" th:object="${review}">
+
+				<div class = "create_review_header">
+					<h3>Create a review</h3>
+					<!--<input type="text" th:text="${name}" name = "name" id = "name" th:value="${name}" readonly/>-->
+					<input type="text" name="name" value="" th:value="${review.name}" readonly/>
+				</div>
+
+				<div class = "create_review_body">
+					<!-- Restaurant -->
+					<div class = "create_review_subsection">
+						<label>Select a restaurant:</label>
+						<select th:field="*{restaurantID}">
+							<option th:each="p,i : ${listRestaurants}" th:value="${i.index}" th:text="${p}" />
+						</select>
+					</div>
+
+					<!-- Rating -->
+					<div class = "create_review_subsection">
+						<label>Select a rating:</label>
+						<select th:field="*{rating}">
+							<option th:each="p,i : ${listRatings}" th:value="${i.index}" th:text="${p}"/>
+						</select>
+					</div>
+
+					<!-- Optional review comment -->
+					<div class = "create_review_subsection">
+						<input type="text" th:field="*{comment}"/>
+					</div>
+
+					<div class = "create_review_subsection">
+						<button class="review_btn" type="submit">Submit review</button>
+					</div>
+				</div>
+			</form>	
+		</div>
+	</div>
+
+
+</body>
+</html> 

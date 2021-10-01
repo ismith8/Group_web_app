@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<link rel="stylesheet" href="css/styles.css">  
+	<link rel="stylesheet" th:href="@{/css/review_rest.css}"> 
+	<title>Georgie's Eat' Restaurants</title>
+	<script>
+		function submit(id) {
+			console.log("Submitting....");
+			let t = "form-";
+			t += id;
+			document.getElementById(t).submit(); 
+			console.log("Submitted");
+		}
+	</script>
+</head>
+
+
+<body>
+	<div class = "header">
+		<div class = "back">
+			<button class="back_btn" onclick="window.location='/'"></button>
+		</div>
+		<h1> Georgie's Restaurants </h1>
+		<div class = "h_spacer"></div>
+	</div>
+
+	<div class="restaurant_body">
+		
+		<div th:each="p, i: ${restaurantList}" class = "restaurant_container">
+			<form action="#" th:action="@{/register}" method="post" th:object="${restaurant}" th:id="'form-' + ${i.index}" style="display:none">
+				<input type ="text" name = "name" id = "name" th:value="${p.name}"/>
+				<input type="text" name = "restaurantID" id="restaurantID" th:value="${p.restaurantID}"/>
+			</form>
+			<img class = "logo" th:src="${p.path}" th:attr="onclick=|submit('${i.index}')|">
+		</div>
+		
+	</div>
+	
+
+</body>
+</html> 

@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="css/styles.css">  
+	<link rel="stylesheet" th:href="@{/css/review_rest.css}"> 
+	<title>Georgie's Eat's</title>
+</head>
+
+<body>
+	<div class = "header">
+		<div class = "back">
+			<button class="back_btn" onclick="window.location='/'"></button>
+		</div>
+		<h1>Your review</h1>
+		<div class = "h_spacer"></div>
+	</div>
+
+	<div class = "main">
+		<h2>Could not add review :(</h2>
+		<button onclick="window.location='create-review'">Try again</button>
+	</div>
+
+</body>
+</html>

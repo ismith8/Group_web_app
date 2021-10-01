@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="css/styles.css">  
+	<link rel="stylesheet" th:href="@{/css/review_rest.css}">  
+	<title>Georgie's Eat's</title>
+</head>
+
+
+<body>
+	<div class = "header">
+		<div class = "h_spacer"></div>
+		<h1>Login</h1>
+		<div class = "h_spacer"></div>
+	</div>
+
+	<div class = "login-body">
+		<form action="#" th:action="@{/login}" method="post">
+			<label>Enter your Member ID:</label>
+			<input type="text" th:value="${memID}" name="memID"/>
+			<button type="submit">Login</button>
+		</form>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Member Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /*adding header from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_style_header*/
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #8bc671;
+                color: white;
+                font-size: 30px;
+            }
+            /*profile card from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_profile_card*/
+            .card {
+                padding: 60px; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                margin: auto;
+                text-align: center;
+                font-family: arial; 
+                /*height: 450px;*/
+            }
+            .title {
+                color: grey;
+                font-size: 18px;
+            }
+            /*created column cards from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_column_cards*/
+            .column {
+                float: left;
+                padding: 20px;
+            }
+            .row {
+                margin: 0 -5px;
+            }
+        </style>
+    </head>
+    <body>
+    <CENTER>
+        <!--adding header -->
+        <div class="header">
+            <h1>Georgie's Eats | Profile</h1>
+        </div>
+        <!--profile card -- in columns-->
+        <div class='row'>
+            <div class='column' style='width:30%'>
+                <div class='card' style='max-width:400px'>
+                	<h1><span th:text="${mwc.MemberName}"></span></h1>
+                	<p class='title'>Member ID: <span th:text="${mwc.MemberID}"></span></p>
+                	<p>Number of Reviews: <span th:text="${mwc.NumberReviews}"></span></p>
+                	<p><button type="button" onclick="window.location='create_review'">Create New Review</button></p>
+                	<p><button type="button" onclick="window.location='restaurants'">View Restaurants</button></p>
+                	<p><button type="button" onclick="window.location='index'">Return Home</button></p>
+                </div>
+            </div>
+            <div class='column' style='width:65%'>
+                <h1>Previous Reviews</h1>
+                    <div class='card' style='max-width:1000px' th:each="r : ${c_reviews}">
+                    <p class='title'>Restaurant: <span th:text="${r.restaurantName}"></span></p>
+                    <p>Comment: <span th:text="${r.comment}"></span></p>
+                    <p>Rating: <span th:text=" ${r.rating}"></span></p>
+                </div>
+            </div>
+        </div>    
+    </CENTER>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

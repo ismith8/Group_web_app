@@ -1,0 +1,95 @@
+.restaurant_container {
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 5%;
+}
+
+.restaurant_box {
+	border-bottom: 5px solid black;
+	height: 40%;
+	padding-bottom: 5%;
+	padding-top: 5%;
+}
+
+.logo {
+	object-fit: cover;
+	width: 40%;
+	height: 40%;
+}
+
+.rating-img {
+	object-fit: cover;
+	width: 30%;
+	height: 30%;
+}
+
+.restaurant_name {
+	width: 30%;
+	font-size: 40px;
+	padding-right: 5%;
+	padding-top: 2%;
+	padding-left: 5%;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	color: #525252;
+	opacity: .2;
+}
+
+.restaurant_box_header {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 50%;
+}
+
+.restaurant_box_body {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	height: 50%;
+}
+
+.restaurant_tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	flex-direction: row;
+	width: 40%;
+	padding-top: 3%;
+}  
+
+.tag {
+	border: 1px solid gray;
+	border-radius: 3px;
+	width: auto;
+	height: 20px;
+	text-align: center;
+	background: rgba(139, 198, 113, 0.4);
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.restaurant_comment_box {
+	border: 2px solid black;
+	border-radius: 5px;
+	height: 70%;
+	width: 40%;
+	padding: 1%;
+	background-color: #ffffbf;
+}
+
+.restaurant_comment_box_username {
+	font-size: 20px;
+	font-weight: bolder;
+	color: black;
+	opacity: .4;
+}
+
+.restaurant_comment_box_text {
+	padding-left: 7%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	font-style: italic;
+}
+
